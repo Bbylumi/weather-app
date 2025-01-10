@@ -148,9 +148,22 @@ body{
 
 @media (max-width: 600px) {
     .container {
-      margin: 20px;  
-      padding: 16px;  
-      box-shadow: none;  
+        margin: 28px;
+        padding: 19px;
+        box-shadow: none;
+        width: 79%;
+    }
+
+    .info-block-label{
+        margin-top: 10px;
+
+    }
+    .info-block-value{
+        font-size: 22px;
+    }
+
+    .info-block-label img{
+        width: 63px;
     }
   
     .search {

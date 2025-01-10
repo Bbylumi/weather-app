@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Environment } from '../environments/environment';
 import { Weatherdata } from '../models/weather.model';
@@ -9,17 +9,14 @@ import { Observable } from 'rxjs';
 })
 export class WeatherService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getWeatherdata( cityName: string): Observable<Weatherdata> {
+  getWeatherdata(cityName: string): Observable<Weatherdata> {
     return this.http.get<Weatherdata>(Environment.weatherApiBaseUrl, {
-      headers: new HttpHeaders()
-        .set(Environment.xrapidapihostheadername, Environment.xrapidapihostheadervaule)
-        .set(Environment.xrapidapikeyheadername, Environment.xrapidapikeyheadervalue),
       params: new HttpParams()
-        .set('q', cityName)
-        .set('units', 'metric')
-        .set('mode', 'json')
+        .set('q', cityName) // City name
+        .set('units', 'metric') // Metric units for temperature (Celsius)
+        .set('appid', Environment.apiKey) // API key
     });
   }
 }

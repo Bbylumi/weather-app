@@ -19,6 +19,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .container{
@@ -86,6 +87,9 @@ body{
     color: var(--white);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
+    padding-bottom: 5px;
+    margin-top: 15px ;
+    font-weight: 600;
 }
 .more-info-container{
     flex: 1;
@@ -152,6 +156,7 @@ body{
         padding: 19px;
         box-shadow: none;
         width: 79%;
+        overflow: hidden;
     }
 
     .info-block-label{

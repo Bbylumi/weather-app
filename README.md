@@ -1,27 +1,104 @@
-# WeatherApp
+# Weather App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
+## Overview
+This Weather App is an Angular-based application that fetches real-time weather data from the OpenWeatherMap API. The app allows users to input a city name and retrieve the current weather details, including temperature, weather conditions, and more.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
+- **Search Weather by City**: Users can enter the name of a city to get live weather updates.
+- **Real-Time Data**: Fetches data directly from the OpenWeatherMap API.
+- **Responsive Design**: Works seamlessly on devices of all screen sizes.
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technology Stack
+- **Frontend**: Angular
+- **Backend API**: OpenWeatherMap
+- **Styling**: Tailwind CSS 
+- **HTTP Client**: Angular's `HttpClient`
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Prerequisites
+1. Node.js installed (v14 or higher recommended)
+2. Angular CLI installed globally
+3. An active API key from OpenWeatherMap
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Usage
+1. Open the app in your browser.
+2. Enter the name of a city in the search bar.
+3. Press "Search" or hit Enter to fetch the weather data.
+4. View weather details such as temperature, weather description, and humidity.
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Project Structure
+```
+weather-app/
+|
+├── src/
+│   ├── app/
+│   │   ├── services/
+│   │   │   └── weather.service.ts
+│   │   ├── models/
+│   │   │   └── weather.model.ts
+│   │   ├── components/
+│   │   │   └── weather/
+│   │   │       ├── weather.component.ts
+│   │   │       ├── weather.component.html
+│   │   │       └── weather.component.css
+│   ├── environments/
+│   │   └── environment.ts
+│   └── main.ts
+│
+├── angular.json
+├── package.json
+└── README.md
+```
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## API Details
+The app uses the following OpenWeatherMap endpoint:
+
+### Current Weather Data Endpoint
+**Base URL**: `https://api.openweathermap.org/data/2.5/weather`
+
+**Parameters**:
+- `q`: City name (e.g., `London`)
+- `units`: Measurement system (e.g., `metric` for Celsius)
+- `appid`: Your API key
+
+**Example**:
+```bash
+https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=YOUR_API_KEY
+```
+
+---
+
+## Known Issues
+- Ensure the API key is valid and has not exceeded the free usage limit.
+- Slow responses may occur depending on the OpenWeatherMap server.
+
+---
+
+## Future Enhancements
+- Add a 7-day weather forecast feature.
+- Include geolocation support to automatically fetch weather for the user's current location.
+- Improve error handling and user-friendly error messages.
+
+---
+
+## License
+This project is licensed under the MIT License. Feel free to modify and distribute.
+
+---
+
+## Contact
+For questions or feedback, feel free to reach out:
+- Email: odetoyinbopelumi42@gmail.com
+- GitHub: [Bbylumi](https://github.com/BbyLumi)
+

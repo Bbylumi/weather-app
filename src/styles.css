@@ -157,6 +157,8 @@ body{
         box-shadow: none;
         width: 79%;
         overflow: hidden;
+        margin-left: 18px;
+    }
     }
 
     .info-block-label{
@@ -172,7 +174,7 @@ body{
     }
   
     .search {
-      margin: 0 auto; 
+      margin: 0 0 -4px -12px; 
       padding: 10px;
     }
   
@@ -181,4 +183,3 @@ body{
       padding: 8px; 
       box-sizing: border-box;
     }
-  }
